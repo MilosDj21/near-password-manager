@@ -6,6 +6,7 @@ pub type UserAccountId = u128;
 
 #[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize)]
 #[serde(crate = "near_sdk::serde")]
+#[derive(PartialEq, Debug, Clone)]
 pub struct UserAccount{
     pub id: UserAccountId,
     pub user_id: AccountId,
